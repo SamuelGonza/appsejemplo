@@ -1,0 +1,392 @@
+.trabajadoresContainer{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 25px
+}
+
+
+.tarjetasContainer{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.clienteCita{
+    height: auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.Columnas{
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 7px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.puntoReferencia{
+    min-height: 100% !important;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 30px !important;
+    height: 30px !important;
+    min-width: 30px !important;
+    min-height: 30px !important;
+    max-width: 30px !important;
+    max-height: 30px !important;
+    border-radius: 50%;
+    
+
+    .ok{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 2px solid white;
+        background-color: green !important;
+    }
+
+    .ocupado{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 2px solid white;
+        background-color: red !important;
+    }
+
+    .inprocess{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 2px solid white;
+        background-color: orange;
+    }
+}
+
+
+.iniciado{
+    color: black !important;
+    position: relative;
+}
+
+.disponible{
+    font-size: 18px;
+    color: white;
+    border-radius: 20px !important;
+    background-color: rgb(97, 206, 94) !important;
+    position: relative;
+    padding: 4px !important;
+}
+
+#servicios{
+    color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    width: 80%;
+    padding: 7px 7px 7px 7px;
+    font-size: 0.9em !important;
+    background: none;
+    font-size: 1em;
+    border-radius: 8px;
+
+    option{
+        border-radius: 0 !important;
+    }
+}
+
+.botonesHorario{
+    width: 100%;
+    display: flex;
+    margin-top: 7px;
+}
+
+.botonesHorario > button:nth-child(1){
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 10px;
+    cursor: pointer;
+    background-color: rgb(156, 217, 155);
+    border: none;
+    color: white;
+    border-radius: 4px;
+}
+
+.botonesHorario > button:nth-child(2){
+    padding: 7px 10px;
+    cursor: pointer;
+    background-color: var(--color-primary);
+    border: none;
+    color: white;
+    border-radius: 4px;
+}
+
+.timeContainer{
+    display: flex;
+    flex-grow: 0;
+    .time{
+        min-width: 180px;
+        width: 180px;
+        max-width: 180px;
+        font-size: 30px !important;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        text-align: center !important;
+    }
+}
+
+.stateContainer{
+    width: 10% !important;
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.filtrosContainer{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.filtroGrupo{
+    margin-top: calc(40px - 25px);
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.extender{
+    display: flex;
+    gap: 5px;
+}
+
+.extender > input{
+    width: 25px;
+}
+
+.modoEdicionBtn{
+    position: fixed;
+    z-index: 9;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    button{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: none;
+        background-color: var(--color-primary);
+        color: white;
+        font-size: 1.1em;
+        transition: 0.3s all ease;
+        cursor: pointer;
+    }
+}
+
+.citasUnidas{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .trabajadoresContainer{
+        margin-top: 10px;
+    }
+    .tarjetasContainer{
+        padding: 0 10px;
+    }
+
+    .modoEdicionBtn{
+        bottom: 130px;
+    }
+}
+
+.seleccionable{
+    cursor: pointer;
+    position: relative;
+    
+}
+
+.seleccionable::before{
+    position: absolute;
+    content: "";
+    z-index: 8;
+    background-color: rgba(0, 0, 0, 0.241);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+
+.alertaModoEdicion{
+    position: fixed;
+    background-color: white;
+    width: 70%;
+    margin: auto;
+    transform: translateX(25%);
+    z-index: 100;
+    padding: 20px;
+    box-shadow: 0 0  10px rgb(152, 152, 152);
+    border-radius: 20px;
+    
+}
+
+.inputClienteContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.seleccionarCliente-input{
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    width: 80%;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 8px;
+}
+
+.listonExtendida{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(218, 218, 218);
+    width: 60px;
+    height: 40px;
+    color: black;
+    font-size: .7em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.activarTrabajador{
+    position: absolute !important;
+    z-index: 1;
+    right: 10px;
+    top: 10px;
+    background-color: white !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .tarjetasContainer {
+        margin-bottom: 110px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .modoEdicionBtn{
+        bottom: 100px;
+    }
+}
+
+
+@media screen and (max-width: 614px) {
+    .alertaModoEdicion{
+        width: 100%;
+        transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 566px) {
+    .filtrosContainer{
+        gap: 0;
+    }
+    
+    .filtroGrupo{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modoEdicionBtn{
+        left: 15px;
+        button{
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 483px) {
+    .appointment{
+        .puntoReferencia{
+            width: 20px !important;
+            height: 20px !important;
+            max-width: 20px !important;
+            max-height: 20px !important;
+            min-width: 20px !important;
+            min-height: 20px !important;
+        }
+
+        .timeContainer{
+            .time{
+                p{
+                    font-size: .5em !important;
+                }
+                max-width: 140px !important;
+                min-width: 140px !important;
+            }
+        }
+
+        .stateContainer{
+            p{
+                font-size: .8em !important;
+            }
+        }
+
+        max-width: 280px !important;
+        .servicio{
+            width: 100% !important;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .alertaModoEdicion{
+        h2{
+            font-size: 1.2em;
+        }
+        p{
+            font-size: .8em;
+        }
+    }
+}
+
+@media screen and (max-width: 433px) {
+    .appointment{
+        width: 100% !important;
+    }
+}

@@ -1,0 +1,138 @@
+.formWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh; /* Altura mínima para centrar verticalmente */
+    background-color: #f4f4f4; /* Fondo más claro para el contenedor */
+  }
+  
+  .registro-cliente-container {
+    width: 500px;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  
+    h2{
+      text-align: center;
+      margin-bottom: 5px;
+    }
+  }
+  
+  .seccion-image-local {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .seccion-image-local > img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin: 5px;
+    object-fit: cover;
+  }
+  
+  .registro-cliente-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  
+  .registro-cliente-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    margin-top: 15px; /* Menos margen superior */
+  }
+  
+  .registro-cliente-form button:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  
+  
+  
+  /* Estilos para la apariencia personalizada del checkbox */
+  .checkbox-custom:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f0f0;
+    border: 2px solid #d1d1d1;
+    border-radius: 4px;
+  }
+  
+  /* Estilo cuando el checkbox está marcado */
+  .checkbox-custom:checked:before {
+    background-color: #4caf50;
+    border-color: #4caf50;
+  }
+  
+  /* Estilo para el indicador de chequeo */
+  .checkbox-custom:checked:after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+  
+  /* Estilos para la etiqueta */
+  .checkbox-label {
+    cursor: pointer;
+  }
+  
+  @media (max-width: 600px) {
+    .registro-cliente-container {
+      width: 90%; /* Ancho más grande para aprovechar mejor el espacio */
+      padding: 30px; /* Menor relleno */
+    }
+  
+    .registro-cliente-form > label {
+      margin: 5px 0; /* Menor margen entre elementos */
+      font-size: 0.9em; /* Tamaño de fuente más pequeño */
+    }
+  
+    .registro-cliente-form button {
+      padding: 8px; /* Menor relleno en el botón */
+      margin-top: 10px; /* Menor margen superior */
+    }
+  
+    /* Reducción del tamaño del checkbox en pantallas pequeñas */
+    .checkbox-custom {
+      width: 15px;
+      height: 15px;
+    }
+  
+    /* Ajuste del indicador de chequeo para el tamaño reducido */
+    .checkbox-custom:checked:after {
+      left: 4px;
+      top: 1px;
+      width: 5px;
+      height: 10px;
+    }
+  }
+  
+  @media (max-width){
+    .registro-cliente-container {
+      padding: 0px;
+    }
+    
+  }

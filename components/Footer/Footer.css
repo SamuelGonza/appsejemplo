@@ -1,0 +1,28 @@
+.footer {
+    background-color: #212154;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+  
+  .social-icons {
+    margin-top: 10px;
+  }
+  
+  .social-icon {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .social-icon:hover {
+    color: #007bff;
+  }
+  
+  .copyright {
+    margin-top: 20px;
+  }
